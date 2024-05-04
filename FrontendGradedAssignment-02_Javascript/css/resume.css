@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navigationButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1.4vmax;
+}
+
+.navigationButtons button {
+    padding: 0.4vmax;
+    cursor: pointer;
+}
+
+.navigationButtons input {
+    width: 14vmax;
+    padding: 0.3vmax;
+    outline: none;
+}
+
+.resumeContainer {
+
+    margin-top: 1vmax;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.header {
+    text-align: center;
+    background-color: #D1F6F0;
+    padding-bottom: 1.4vmax;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header img {
+    width: 5vmax;
+    height: 5vmax;
+    padding-top: 2.3vmax;
+}
+
+.name {
+    font-size: 1.7rem;
+    padding-top: 2.3vmax;
+    padding-bottom: 1.8vmax;
+}
+
+.resumeContent {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    background-color: #F8E2E2;
+    border: 1px solid #F8E2E2;
+    max-width: 20vmax;
+    height: fit-content;
+    margin: 1.4vmax;
+}
+
+.sidebarHeader {
+    background-color: darkgray;
+    margin: 1vmax;
+    padding: 0.3vmax;
+    font-weight: bold;
+}
+
+.sidebarBody {
+    padding: 0.3vmax;
+    text-align: right;
+    margin: 1vmax;
+}
+
+.resumeBody {
+    margin: 1.4vmax;
+}
+
+.resumeBodyHeader {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.resumeBodyContent {
+    margin: 1.2vmax;
+    text-align: justify;
+}
+
+.detail {
+    padding: 0.4vmax;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 10px;
+    width: 80%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.error span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

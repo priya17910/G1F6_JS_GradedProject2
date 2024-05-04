@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Page</title>
+    <link rel="stylesheet" href="../css/resume.css">
+    <script>
+        window.onload = function () {
+            var isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (!isLoggedIn || isLoggedIn !== 'true') {
+                window.location.href = "login.html";
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div class="navigationButtons" id="navigationButtons">
+        <button id="prevButton">Previous</button>
+        <input type="text" id="jobFilter" placeholder="Search for keywords to filter the resume" />
+        <button id="nextButton">Next</button>
+    </div>
+    <div class="resumeContainer" id="resumeContainer">
+        <div class="header" id="resumeHeader">
+            <div style="width: 80%">
+                <div class="name" id="applicantName">
+
+                </div>
+                Applied For :
+                <span class="appliedFor" id="applicantAppliedFor">
+
+                </span>
+            </div>
+            <div>
+                <img id="profileImage" src="../assets/user.png" />
+            </div>
+        </div>
+        <div class="resumeContent">
+            <div class="sidebar" id="resumeSidebar">
+                <div>
+                    <div class="sidebarHeader">
+                        Personal Information
+                    </div>
+                    <div class="sidebarBody">
+                        <div id="applicantEmail"></div>
+                        <div id="applicantPhone"></div>
+                        <a id="networkLink" href="#">
+                            <div id="applicantNetwork"></div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="sidebarHeader">
+                        Technical Skills
+                    </div>
+                    <div class="sidebarBody">
+                        <div id="applicantSkills"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="sidebarHeader">
+                        Hobbies
+                    </div>
+                    <div class="sidebarBody">
+                        <div id="applicantHobbies"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="resumeBody" id="resumeBody">
+                <div class="workExperience">
+                    <div class="resumeBodyHeader" id="workExperienceHeader">
+                        Work Experience in previous company
+                    </div>
+                    <div class="resumeBodyContent" id="workExperienceBody">
+                        <div class="detail"><strong>Company Name: </strong><span id="companyName"></span></div>
+                        <div class="detail"><strong>Position: </strong><span id="position"></span></div>
+                        <div class="detail"><strong>Start Date: </strong><span id="startDate"></span></div>
+                        <div class="detail"><strong>End Date: </strong><span id="endDate"></span></div>
+                        <div class="detail"><strong>Summary: </strong>
+                            <div id="summary"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="resumeBodyHeader" id="projectHeader">
+                        Projects
+                    </div>
+                    <div class="resumeBodyContent" id="projectBody">
+                        <div class="detail"><strong><span id="projectName"></span>: </strong><span
+                                id="projectDescription"></span></div>
+                    </div>
+                </div>
+                <div class="education">
+                    <div class="resumeBodyHeader" id="educationHeader">
+                        Education
+                    </div>
+                    <ul class="resumeBodyContent" id="educationBody">
+                        <li><strong>High School: </strong><span id="highSchoolInstitute"></span>, <span
+                                id="highSchoolCgpa"></span></li>
+                        <li><strong>Senior Secondary: </strong><span id="seniorSecondaryInstitute"></span>, <span
+                                id="seniorSecondaryCgpa"></span></li>
+                        <li><strong>UG: </strong><span id="ugInstitute"></span>, <span id="ugCgpa"></span></li>
+                    </ul>
+                </div>
+                <div class="internship">
+                    <div class="resumeBodyHeader" id="internshipHeader">
+                        Internship
+                    </div>
+                    <ul class="resumeBodyContent" id="internshipBody">
+                        <li><strong>Company Name: </strong><span id="internCompanyName"></span></li>
+                        <li><strong>Position: </strong><span id="internPosition"></span></li>
+                        <li><strong>Start Date: </strong><span id="internStartDate"></span></li>
+                        <li><strong>End Date: </strong><span id="internEndDate"></span></li>
+                        <li><strong>Summary: </strong>
+                            <div id="internSummary"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="achievement">
+                    <div class="resumeBodyHeader" id="achievementHeader">
+                        Achievements
+                    </div>
+                    <ul class="resumeBodyContent" id="achievementBody">
+                        <li id="achievements"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="error" class="error">
+        <span>
+            <img class="image" src="../assets/error.png" />
+            <p class="message">Invalid Search or No applications for this job</p>
+        </span>
+    </div>
+    <script src="../js/resume.js"></script>
+</body>
+
+</html>
